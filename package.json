@@ -1,0 +1,25 @@
+{
+  "name": "knockoutjs-billing-app-sample",
+  "version": "1.0.0",
+  "description": "sample knockoutjs application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijayvulchi/knockoutjs-billing-app-sample.git"
+  },
+  "keywords": [
+    "knockoutjs"
+  ],
+  "author": "vulchi vijaya kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vijayvulchi/knockoutjs-billing-app-sample/issues"
+  },
+  "homepage": "https://github.com/vijayvulchi/knockoutjs-billing-app-sample#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
