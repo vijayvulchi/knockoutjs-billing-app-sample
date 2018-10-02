@@ -1,24 +1,27 @@
 extends layout
 
 block content
-	div.container.ptb-lg
-		<!-- h1= title -->
-		<!-- p Welcome to #{title} -->
-		<!-- ul(data-bind="foreach: todoItems")
-			li
-				input(type="checkbox" data-bind="checked: completed" id=name)
-				label(data-bind="text: name" for=name) -->
+	div.container
 		h2.title.align-center Items list
 		table
 			thead
 				tr
 					th Product Name
-					th Quantity
 					th Each Price
+					th Quantity
 					th Net Price
+					th Remove
 			tbody(data-bind="foreach: items")
 				tr
-					td(data-bind="text: item().productname")
-					td(data-bind="text: item().quantity" class="align-center")
+					td
+						select(data-bind="options: $root.jsonData().vegetables, value: item, optionsText: 'productname'")
 					td(data-bind="text: item().price" class="align-center")
-					td(class="align-center bold")
+					td
+						select(data-bind="options: $root.jsonData().quantity, value: item, optionsText: 'quantity'" class="align-center")
+					td(data-bind="text: formattedPrice" class="align-center bold")
+					td
+						a(href="#" data-bind="click: $root.removeItem") Remove
+		h3(data-bind="visible: totalAmount() > 0" class="total-amount align-right")
+			Total surcharge: $
+			span(data-bind="text: totalAmount().toFixed(2)")
+		button(data-bind="click: addNewItem" class="btn") Add New Item
