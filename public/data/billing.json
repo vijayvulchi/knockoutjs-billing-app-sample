@@ -1,0 +1,81 @@
+{
+	"appTitle": "Builling system",
+	"appSubTitle": "by Vijaya Kumar Vulchi",
+	"vegetables": [
+		{
+			"productname": "broccoli",
+			"quantity": 1,
+			"price": 10.49
+		},
+        {
+        	"productname": "corn",
+        	"quantity": 1,
+        	"price": 34.95
+        },
+        {
+        	"productname": "cucumber",
+        	"quantity": 1,
+        	"price": 15.90
+        },
+        {
+        	"productname": "lettuce",
+        	"quantity": 1,
+        	"price": 34.09
+        },
+        {
+        	"productname": "pumpkin",
+        	"quantity": 1,
+        	"price": 19.04
+        },
+        {
+        	"productname": "tomato",
+        	"quantity": 1,
+        	"price": 17.60
+        },
+        {
+        	"productname": "beetroot",
+        	"quantity": 1,
+        	"price": 21.80
+        },
+        {
+        	"productname": "brussel sprouts",
+        	"quantity": 1,
+        	"price": 9.90 
+        },
+        {
+        	"productname": "lettuce",
+        	"quantity": 1,
+        	"price": 8.45 
+        },
+        {
+        	"productname": "mushrooms",
+        	"quantity": 1,
+        	"price": 55.20
+        },
+        {
+        	"productname": "onion",
+        	"quantity": 1,
+        	"price": 19.80
+        },
+        {
+        	"productname": "potato",
+        	"quantity": 1,
+        	"price": 29.19
+        },
+        {
+        	"productname": "red pepper",
+        	"quantity": 1,
+        	"price": 12.80
+        },
+        {
+        	"productname": "peas",
+        	"quantity": 1,
+        	"price": 12.33
+        },
+        {
+        	"productname": "leek",
+        	"quantity": 1,
+        	"price": 16.91
+        }
+	]
+}

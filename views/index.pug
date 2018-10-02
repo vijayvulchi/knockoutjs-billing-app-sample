@@ -1,6 +1,24 @@
 extends layout
 
 block content
-	div.container
+	div.container.ptb-lg
 		<!-- h1= title -->
 		<!-- p Welcome to #{title} -->
+		<!-- ul(data-bind="foreach: todoItems")
+			li
+				input(type="checkbox" data-bind="checked: completed" id=name)
+				label(data-bind="text: name" for=name) -->
+		h2.title.align-center Items list
+		table
+			thead
+				tr
+					th Product Name
+					th Quantity
+					th Each Price
+					th Net Price
+			tbody(data-bind="foreach: items")
+				tr
+					td(data-bind="text: item().productname")
+					td(data-bind="text: item().quantity" class="align-center")
+					td(data-bind="text: item().price" class="align-center")
+					td(class="align-center bold")
