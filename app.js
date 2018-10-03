@@ -19,6 +19,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// adding third party libraries
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
+app.use('/knockout', express.static(__dirname + '/node_modules/knockout/build/output/'));
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 

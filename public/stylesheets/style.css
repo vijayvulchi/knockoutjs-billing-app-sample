@@ -1,8 +1,83 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+html {
+	box-sizing: border-box;
 }
-
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+body {
+	font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+	background-color: #fff;
+	color: #333;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
 a {
-  color: #00B7FF;
+	color: #00B7FF;
+}
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+header,
+footer {
+	padding: 10px 0;
+	background-color: #999;
+	color: #fff;
+}
+.title {
+	margin: 15px 0;
+	font-size: 18px;
+}
+.align-center {
+	text-align: center;
+}
+.align-right {
+	text-align: right;
+}
+.bold {
+	font-weight: bold;
+}
+table {
+	width: 100%;
+	border: 1px solid #eee;
+}
+th,
+tr {
+	border-bottom: 1px solid #eee;
+}
+th {
+	padding: 10px;
+	background-color: #999;
+	color: #fff;
+}
+tr:nth-child(odd) {
+	background-color: #ccc;
+}
+tr:nth-child(even) {
+	background-color: #ddd;
+}
+td {
+	padding: 5px 10px;
+}
+.btn {
+	margin: 15px 0;
+	padding: 8px 12px;
+	background-color: green;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
 }
