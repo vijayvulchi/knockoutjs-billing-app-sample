@@ -4,7 +4,7 @@ function item(initialItem, initialQuantity) {
     self.quantity = ko.observable(initialQuantity);
 	self.formattedPrice = ko.computed(function() {
 		var price = self.item().price * self.quantity().quantity;
-		return price ? "$" + price.toFixed(2) : "None";        
+		return price ? "$" + price.toFixed(2) : "None";
 	});
 }
 
