@@ -22,7 +22,11 @@ block content
 					td(data-bind="text: formattedPrice" class="align-center bold")
 					td
 						a(href="#" data-bind="click: $root.removeItem") Remove
-		h3(data-bind="visible: totalAmount() > 0" class="total-amount align-right")
-			span Total: $
-			span(data-bind="text: totalAmount().toFixed(2)")
+			tfoot(data-bind="visible: totalAmount() > 0")
+				tr
+					td(colspan= "3" class="bold align-right") Total
+					td(class="align-center bold")
+						span $
+						span(data-bind="text: totalAmount().toFixed(2)")
+					td
 		button(data-bind="click: addNewItem" class="btn") Add New Item
