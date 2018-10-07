@@ -2,9 +2,9 @@ function item(initialItem, initialQuantity) {
     var self = this;
     self.item = ko.observable(initialItem);
     self.quantity = ko.observable(initialQuantity);
-	self.formattedPrice = ko.computed(function() {
+	self.formattedPrice = ko.computed(function () {
 		var price = self.item().price * self.quantity().quantity;
-		return price ? "$" + price.toFixed(2) : "None";        
+		return price ? "$" + price.toFixed(2) : "None";
 	});
 }
 
