@@ -16,17 +16,21 @@ block content
 				tr
 					td
 						select(data-bind="options: $root.jsonData().vegetables, value: item, optionsText: 'productname'")
-					td(data-bind="text: item().price" class="align-center")
+					td(class="align-center")
+						span $
+						span(data-bind="text: item().price")
 					td
 						select(data-bind="options: $root.jsonData().quantity, value: quantity, optionsText: 'quantity'" class="align-center")
-					td(data-bind="text: formattedPrice" class="align-center bold")
+					td(class="align-center")
+						span $
+						span(data-bind="text: total")
 					td
 						a(href="#" data-bind="click: $root.removeItem") Remove
 			tfoot(data-bind="visible: totalAmount() > 0")
 				tr
-					td(colspan= "3" class="bold align-right") Total
-					td(class="align-center bold")
+					td(colspan= "3" class="align-right") Total
+					td(class="align-center")
 						span $
-						span(data-bind="text: totalAmount().toFixed(2)")
+						span(data-bind="text: totalAmount()")
 					td
 		button(data-bind="click: addNewItem" class="btn") Add New Item

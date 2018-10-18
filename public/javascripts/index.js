@@ -2,10 +2,10 @@ function item(initialItem, initialQuantity) {
     var self = this;
     self.item = ko.observable(initialItem);
     self.quantity = ko.observable(initialQuantity);
-	self.formattedPrice = ko.computed(function () {
-		var price = self.item().price * self.quantity().quantity;
-		return price ? "$" + price.toFixed(2) : "None";
-	});
+	self.total = ko.computed(function () {
+		return self.item().price.toFixed(2) * self.quantity().quantity;
+		// return price ? "$" + price.toFixed(2) : "None";
+	}, this);
 }
 
 function viewModel() {
@@ -14,7 +14,7 @@ function viewModel() {
 	self.appTitle = ko.observable();
 	self.appSubTitle = ko.observable();
 	self.jsonData = ko.observableArray();
-	self.items = ko.observableArray()
+	self.items = ko.observableArray();
 	self.addNewItem = ko.observable();
 
 	// Load initial state from server
@@ -36,16 +36,19 @@ function viewModel() {
 	    self.addNewItem = function() {
 	        self.items.push(new item(self.jsonData().vegetables[0], self.jsonData().quantity[0]));
 	    }
-	    self.removeItem = function(item) { self.items.remove(item) }
+		//
+		self.removeItem = function (item) {
+			self.items.remove(item);
+		}
     }
 
 	self.totalAmount = ko.computed(function() {
 		var total = 0;
 		for (var i = 0; i < self.items().length; i++) {
-			total += self.items()[i].item().price;
+			total += self.items()[i].total();
 		}
-		return total;
-	});
+		return total.toFixed(2);
+	}, this);
 
 	self.fullAppName = ko.computed(function () {
 		return self.appTitle() + ' ' + self.appSubTitle();
