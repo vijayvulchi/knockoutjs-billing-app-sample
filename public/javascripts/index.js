@@ -3,7 +3,7 @@ function item(initialItem, initialQuantity) {
     self.item = ko.observable(initialItem);
     self.quantity = ko.observable(initialQuantity);
 	self.total = ko.computed(function () {
-		return self.item().price.toFixed(2) * self.quantity().quantity;
+		return self.item().price * self.quantity().quantity;
 		// return price ? "$" + price.toFixed(2) : "None";
 	}, this);
 }
